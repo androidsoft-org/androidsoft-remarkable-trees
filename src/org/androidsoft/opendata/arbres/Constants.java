@@ -12,37 +12,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
-
-import android.os.Bundle;
-import com.jwetherell.augmented_reality.data.ARData;
-import org.androidsoft.opendata.arbres.R;
-import org.androidsoft.opendata.arbres.service.ArbreService;
-import org.androidsoft.poi.service.POIDataSource;
-import org.androidsoft.poi.ui.activity.POIARActivity;
+package org.androidsoft.opendata.arbres;
 
 /**
  *
  * @author pierre
  */
-public class ArbresARActivity extends POIARActivity
+public class Constants
 {
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-
-        //Local
-        POIDataSource localData = new POIDataSource( this , new ArbreService(), R.drawable.icon );
-        
-        ARData.addMarkers(localData.getMarkers());
-
-    }
-    
-    
-
+    public static final String ACTION_DASHBOARD = "org.androidsoft.opendata.arbres.ACTION_DASHBOARD";
+    public static final String ACTION_DISPLAY_POI_LIST = "org.androidsoft.opendata.arbres.ACTION_LIST";
+    public static final String ACTION_DISPLAY_POI_MAP = "org.androidsoft.opendata.arbres.ACTION_MAP";
+    public static final String ACTION_DISPLAY_POI_AR = "org.androidsoft.opendata.arbres.ACTION_AR";
+    public static final String ACTION_ABOUT = "org.androidsoft.opendata.arbres.ACTION_ABOUT";
     
 }

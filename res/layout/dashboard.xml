@@ -7,16 +7,21 @@
     <Button android:id="@+id/button_poi_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="POI List"/>
+            android:text="List"/>
     
     <Button android:id="@+id/button_poi_map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="POI Map"/>
+            android:text="Map"/>
     
     <Button android:id="@+id/button_poi_ar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="POI AR"/>
+            android:text="AR"/>
+
+    <Button android:id="@+id/button_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"/>
 </LinearLayout>
 

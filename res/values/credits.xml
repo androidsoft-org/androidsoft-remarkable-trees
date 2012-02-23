@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <array name="credits">
+        <item>*</item>
+        <item>*</item>
+        <item>-= Opendata =- </item>
+        <item>*</item>
+        <item>*Cette application utilise des données</item>
+        <item>*concernant les arbres remarquables</item>
+        <item>*de Paris diffusées par la Ville de Paris</item>
+        <item>* sous "Licence ODbL"</item>
+        <item>*</item>
+        <item>*Ces données et la licence sont disponibles</item>
+        <item>*sur le site : </item>
+        <item>*</item>
+        <item>http://opendata.paris.fr</item>
+        <item>*</item>
+        <item>*</item>
+        <item>*</item>
+        <item>-= Credits =-</item>
+        <item>*</item>
+        <item>Directrice Artistique</item>
+        <item>*Michele Roohani</item>
+        <item>*</item>
+        <item>*</item>
+        <item>Développeur</item>
+        <item>*Pierre Levy</item>
+        <item>*</item>
+        <item>*</item>
+        <item>*</item>
+        <item>*</item>
+        <item>*Copyright (c) 2012 Tous droits réservés</item>
+    </array>
+</resources>
+
