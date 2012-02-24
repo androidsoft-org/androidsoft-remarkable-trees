@@ -24,7 +24,7 @@ import org.androidsoft.opendata.arbres.R;
 public class SplashActivity extends Activity
 {
 
-    private static final int SPLASH_DELAY = 2000;
+    private static final int SPLASH_DELAY = 4000;
     private Thread mThread;
 
     /**
