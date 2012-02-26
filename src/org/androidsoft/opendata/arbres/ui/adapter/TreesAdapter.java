@@ -12,7 +12,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
+package org.androidsoft.opendata.arbres.ui.adapter;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
@@ -24,20 +24,20 @@ import android.widget.TextView;
 import java.util.List;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.poi.model.POI;
-import org.androidsoft.poi.ui.activity.POIAdapter;
+import org.androidsoft.poi.ui.adapter.POIAdapter;
 
 /**
  *
  * @author pierre
  */
-public class ArbresAdapter extends POIAdapter
+public class TreesAdapter extends POIAdapter
 {
     /**
      * Constructor
      * @param activity
      * @param list 
      */
-    public ArbresAdapter( Activity activity , List<POI> list )
+    public TreesAdapter( Activity activity , List<POI> list )
     {
         super( activity , list );
     }

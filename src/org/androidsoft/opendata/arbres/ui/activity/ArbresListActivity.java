@@ -14,30 +14,48 @@
  */
 package org.androidsoft.opendata.arbres.ui.activity;
 
-import android.app.Activity;
+import org.androidsoft.opendata.arbres.ui.adapter.TreesAdapter;
+import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-import android.widget.ListView;
 import java.util.List;
+import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.opendata.arbres.service.ArbreService;
 import org.androidsoft.poi.service.LocationService;
 import org.androidsoft.poi.service.POIService;
+import org.androidsoft.poi.ui.activity.POIListActivity;
+import org.androidsoft.poi.ui.adapter.POIAdapter;
 
 /**
  *
  * @author pierre
  */
-public class ArbresListActivity extends Activity
+public class ArbresListActivity extends POIListActivity 
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView( R.layout.poi_list);
-        ListView lvPOIs = (ListView) findViewById( R.id.listview_poi);
-        
+    }
+    
+    
+    @Override
+    protected int getLayout()
+    {
+        return R.layout.poi_list;
+    }
+
+    @Override
+    protected int getListId()
+    {
+        return R.id.listview_poi;
+    }
+
+    @Override
+    protected POIAdapter getAdapter()
+    {
         ArbreService service = new ArbreService();
         List list = service.getPOIs(this);
         double latitude = 2.34;
@@ -50,8 +68,19 @@ public class ArbresListActivity extends Activity
         }
         list = POIService.getNearestPOI(list, latitude, longitude, 60, 1000000000 );
 
-        lvPOIs.setAdapter( new ArbresAdapter(this, list ));
-        
+        return new TreesAdapter(this, list );
     }
-    
+
+    public void onPOITap(int id)
+    {
+        startTreeActivity(id);
+    }
+
+    private void startTreeActivity( int id )
+    {
+        Intent intent = new Intent( Constants.ACTION_TREE );
+        intent.putExtra(Constants.TREE_ID, id );
+        startActivity(intent);
+    }
+  
 }

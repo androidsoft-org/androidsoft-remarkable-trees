@@ -63,6 +63,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.TreeActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="org.androidsoft.opendata.arbres.ACTION_ARBRE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         
     </application>
 </manifest>

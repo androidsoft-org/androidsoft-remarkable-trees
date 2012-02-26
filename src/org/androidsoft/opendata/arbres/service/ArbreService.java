@@ -14,6 +14,8 @@
  */
 package org.androidsoft.opendata.arbres.service;
 
+import android.content.Context;
+import java.util.List;
 import org.androidsoft.opendata.arbres.model.Arbre;
 import org.androidsoft.poi.service.POIService;
 
@@ -23,8 +25,17 @@ import org.androidsoft.poi.service.POIService;
  */
 public class ArbreService extends POIService<Arbre>
 {
+    
+    private static ArbreService mSingleton = new ArbreService();
+    
+    
     private static final String CSV_FILE = "arbres.csv";
 
+    public static ArbreService instance()
+    {
+        return mSingleton;
+    }
+    
     @Override
     public String getAssetFile()
     {
@@ -35,6 +46,19 @@ public class ArbreService extends POIService<Arbre>
     public Arbre newInstance(String[] record)
     {
         return new Arbre( record );
+    }
+    
+    public Arbre getTree( Context context , int id )
+    {
+        List<Arbre> list = getPOIs( context );
+        for( Arbre arbre : list )
+        {
+            if( arbre.getId() == id )
+            {
+                return arbre;
+            }
+        }
+        return null;
     }
     
 }

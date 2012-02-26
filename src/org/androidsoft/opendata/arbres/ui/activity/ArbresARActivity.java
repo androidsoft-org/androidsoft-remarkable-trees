@@ -14,11 +14,13 @@
  */
 package org.androidsoft.opendata.arbres.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import com.jwetherell.augmented_reality.data.ARData;
+import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.opendata.arbres.service.ArbreService;
-import org.androidsoft.poi.service.POIDataSource;
+import org.androidsoft.poi.ar.POIDataSource;
 import org.androidsoft.poi.ui.activity.POIARActivity;
 
 /**
@@ -42,6 +44,17 @@ public class ArbresARActivity extends POIARActivity
 
     }
     
+    public void onPOITap(int id)
+    {
+        startTreeActivity(id);
+    }
+    
+    public void startTreeActivity( int id )
+    {
+        Intent intent = new Intent( Constants.ACTION_TREE );
+        intent.putExtra(Constants.TREE_ID, id );
+        startActivity(intent);
+    }
     
 
     

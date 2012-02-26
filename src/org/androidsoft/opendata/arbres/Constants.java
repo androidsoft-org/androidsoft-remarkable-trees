@@ -25,5 +25,7 @@ public class Constants
     public static final String ACTION_DISPLAY_POI_MAP = "org.androidsoft.opendata.arbres.ACTION_MAP";
     public static final String ACTION_DISPLAY_POI_AR = "org.androidsoft.opendata.arbres.ACTION_AR";
     public static final String ACTION_ABOUT = "org.androidsoft.opendata.arbres.ACTION_ABOUT";
+    public static final String ACTION_TREE = "org.androidsoft.opendata.arbres.ACTION_ARBRE";
+    public static final String TREE_ID = "id_tree";
     
 }

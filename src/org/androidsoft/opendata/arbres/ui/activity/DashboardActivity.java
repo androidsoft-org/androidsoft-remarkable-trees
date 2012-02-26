@@ -95,4 +95,5 @@ public class DashboardActivity extends Activity implements View.OnClickListener
         Intent intent = new Intent( Constants.ACTION_ABOUT );
         startActivity(intent);
     }
+
 }

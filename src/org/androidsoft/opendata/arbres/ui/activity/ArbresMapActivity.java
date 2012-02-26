@@ -14,13 +14,15 @@
  */
 package org.androidsoft.opendata.arbres.ui.activity;
 
+import android.content.Intent;
 import java.util.List;
+import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.opendata.arbres.service.ArbreService;
 import org.androidsoft.poi.model.POI;
 import org.androidsoft.poi.service.POIService;
 import org.androidsoft.poi.ui.activity.POIMapActivity;
-import org.androidsoft.poi.ui.activity.POIOverlayResources;
+import org.androidsoft.poi.map.POIOverlayResources;
 
 /**
  *
@@ -76,5 +78,16 @@ public class ArbresMapActivity extends POIMapActivity
     {
         return ZOOM;
     }
+
+    public void onPOITap(int id)
+    {
+        startTreeActivity(id);
+    }
     
+    public void startTreeActivity( int id )
+    {
+        Intent intent = new Intent( Constants.ACTION_TREE );
+        intent.putExtra(Constants.TREE_ID, id );
+        startActivity(intent);
+    }
 }
