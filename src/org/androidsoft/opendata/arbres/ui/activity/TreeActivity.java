@@ -4,10 +4,12 @@
  */
 package org.androidsoft.opendata.arbres.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.widget.TabHost;
+import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.opendata.arbres.ui.adapter.TabsAdapter;
 import org.androidsoft.opendata.arbres.ui.fragment.TreeDataFragment;
@@ -23,6 +25,7 @@ public class TreeActivity extends FragmentActivity
     TabHost mTabHost;
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;
+    private int mTreeId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -30,6 +33,10 @@ public class TreeActivity extends FragmentActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.fragment_tabs_pager);
+        
+        Intent intent = getIntent();
+        mTreeId = intent.getIntExtra(Constants.TREE_ID, 0);
+        
         mTabHost = (TabHost) findViewById(android.R.id.tabhost);
         mTabHost.setup();
 
@@ -53,5 +60,10 @@ public class TreeActivity extends FragmentActivity
     {
         super.onSaveInstanceState(outState);
         outState.putString("tab", mTabHost.getCurrentTabTag());
+    }
+    
+    public int getTreeId()
+    {
+        return mTreeId;
     }
 }

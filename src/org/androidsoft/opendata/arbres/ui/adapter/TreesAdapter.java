@@ -67,7 +67,7 @@ public class TreesAdapter extends POIAdapter
         tvTitle.setText( poi.getTitle());
 
         final TextView tvDescription = (TextView) convertView.findViewById(R.id.description);
-        tvDescription.setText(poi.getDesciption());
+        tvDescription.setText(poi.getDescription());
 
         final TextView tvDistance = (TextView) convertView.findViewById(R.id.distance);
         tvDistance.setText(""  + poi.getDistance() + " m");

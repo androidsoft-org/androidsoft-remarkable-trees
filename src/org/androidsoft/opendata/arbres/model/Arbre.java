@@ -229,14 +229,9 @@ public class Arbre extends AbstractPOI
         return _nomCommun;
     }
     
-    public String getDesciption()
+    public String getDescription()
     {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Année de plantation : " ).append( _annee ).append("\n");
-        sb.append("Hauteur : " ).append( _hauteur ).append("\n");
-        sb.append("Circonférence : " ).append( _circonference ).append("\n");
-        sb.append("Lieu : " ).append( _espaceVert ).append("\n");
-        return sb.toString();
+        return _espaceVert;
     }
 
     /**

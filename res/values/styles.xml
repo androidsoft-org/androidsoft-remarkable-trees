@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <style  name="TreeTheme" parent="android:Theme.Light">
+    
+    </style>
+    
+    <style name="text_title" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

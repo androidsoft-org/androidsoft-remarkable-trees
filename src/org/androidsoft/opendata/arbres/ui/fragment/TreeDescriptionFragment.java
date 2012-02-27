@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import org.androidsoft.opendata.arbres.R;
+import org.androidsoft.opendata.arbres.ui.activity.TreeActivity;
 import org.androidsoft.utils.res.ResourceImageGetter;
 import org.androidsoft.utils.res.ResourceUtils;
 
@@ -60,8 +61,12 @@ public class TreeDescriptionFragment extends Fragment
         View v = inflater.inflate(R.layout.fragment_tree_description, container, false);
         TextView tv = (TextView) v.findViewById(R.id.text);
 
+        TreeActivity activity = (TreeActivity) getActivity();
+        
+        String assetFormat = activity.getString( R.string.html_asset_format);
+        String asset = String.format(assetFormat, activity.getTreeId() );
 
-        String help = ResourceUtils.readAssetTextFile(getActivity(), "52.html");
+        String help = ResourceUtils.readAssetTextFile(getActivity(), asset );
         tv.setText(Html.fromHtml(help, new ResourceImageGetter(getActivity()), null));
         return v;
     }

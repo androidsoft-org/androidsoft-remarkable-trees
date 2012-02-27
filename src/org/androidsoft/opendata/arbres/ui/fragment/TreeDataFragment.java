@@ -13,6 +13,7 @@ import android.widget.TextView;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.opendata.arbres.model.Arbre;
 import org.androidsoft.opendata.arbres.service.ArbreService;
+import org.androidsoft.opendata.arbres.ui.activity.TreeActivity;
 
 /**
  *
@@ -57,17 +58,60 @@ public class TreeDataFragment extends Fragment
             Bundle savedInstanceState)
     {
         View v = inflater.inflate(R.layout.fragment_tree_data, container, false);
+        
+        TreeActivity activity = (TreeActivity) getActivity();
 
-        Arbre tree = ArbreService.instance().getTree( getActivity(), 52 );
-        final TextView tvTitle = (TextView) v.findViewById(R.id.title);
-        tvTitle.setText( tree.getTitle());
+        Arbre tree = ArbreService.instance().getTree( activity, activity.getTreeId() );
+        
+        if( tree.getNomCommun() != null )
+        {    
+            final TextView tvName = (TextView) v.findViewById(R.id.common_name);
+            tvName.setText( tree.getNomCommun());
+        }
+        
+        if( tree.getGenre() != null )
+        {
+            final TextView tvVariety = (TextView) v.findViewById(R.id.gender);
+            tvVariety.setText( tree.getGenre());
+        }
+        
+        if( tree.getEspece() != null )
+        {    
+            final TextView tvSpecies = (TextView) v.findViewById(R.id.species);
+            tvSpecies.setText( tree.getEspece());
+        }
+        
+        if( tree.getVariete() != null )
+        {
+            final TextView tvVariety = (TextView) v.findViewById(R.id.variety);
+            tvVariety.setText( tree.getVariete());
+        }
+        
+        if( tree.getHauteur() != null )
+        {
+            final TextView tvHeight = (TextView) v.findViewById(R.id.tree_height);
+            tvHeight.setText( "" + tree.getHauteur() + " m");
+        }
+        
+        if( tree.getCirconference() != null )
+        {
+            final TextView tvCircumference = (TextView) v.findViewById(R.id.tree_circumference);
+            tvCircumference.setText( tree.getCirconference() + " m");
+        }
 
-        final TextView tvDescription = (TextView) v.findViewById(R.id.description);
-        tvDescription.setText(tree.getDesciption());
-
-        final TextView tvDistance = (TextView) v.findViewById(R.id.distance);
-        tvDistance.setText(""  + tree.getDistance() + " m");
-
+        if( tree.getAnnee() != null )
+        {
+            final TextView tvYear = (TextView) v.findViewById(R.id.year);
+            tvYear.setText( "" + tree.getAnnee());
+        }
+        
+        if( tree.getEspaceVert() != null )
+        {
+            final TextView tvLocation = (TextView) v.findViewById(R.id.tree_location);
+            tvLocation.setText( tree.getEspaceVert());
+        }
+            
+            
         return v;
     }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Arbres remarquables</string>
+    
+        <!-- Credits screen -->
+    <string name="credits_current_version">Version 1.0</string>
+    <string name="credits_app_name">Arbres remarquables de Paris</string>
+
+    <string name="html_asset_format">%1$d-fr.html</string>
+    
+
+</resources>

@@ -48,7 +48,7 @@ public class AboutActivity extends Activity
         p.setBitmapBackgroundLandscapeRes(R.drawable.bg_about_land);
         p.setArrayCreditsRes(R.array.credits);
 
-        p.setColorDefault(0xCC8D1C0E);
+        p.setColorDefault(0xCC7CD22F);
         p.setTextSizeDefault(32);
         p.setTypefaceDefault(Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD));
         p.setSpacingBeforeDefault(10);
