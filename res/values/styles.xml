@@ -10,4 +10,9 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="text_data" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">20dp</item>
+    </style>
 </resources>

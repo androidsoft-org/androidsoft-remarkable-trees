@@ -63,12 +63,6 @@ public class TreeDataFragment extends Fragment
 
         Arbre tree = ArbreService.instance().getTree( activity, activity.getTreeId() );
         
-        if( tree.getNomCommun() != null )
-        {    
-            final TextView tvName = (TextView) v.findViewById(R.id.common_name);
-            tvName.setText( tree.getNomCommun());
-        }
-        
         if( tree.getGenre() != null )
         {
             final TextView tvVariety = (TextView) v.findViewById(R.id.gender);
@@ -96,7 +90,7 @@ public class TreeDataFragment extends Fragment
         if( tree.getCirconference() != null )
         {
             final TextView tvCircumference = (TextView) v.findViewById(R.id.tree_circumference);
-            tvCircumference.setText( tree.getCirconference() + " m");
+            tvCircumference.setText( tree.getCirconference() + " cm");
         }
 
         if( tree.getAnnee() != null )
@@ -105,12 +99,6 @@ public class TreeDataFragment extends Fragment
             tvYear.setText( "" + tree.getAnnee());
         }
         
-        if( tree.getEspaceVert() != null )
-        {
-            final TextView tvLocation = (TextView) v.findViewById(R.id.tree_location);
-            tvLocation.setText( tree.getEspaceVert());
-        }
-            
             
         return v;
     }

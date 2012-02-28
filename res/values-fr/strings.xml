@@ -7,6 +7,7 @@
     <string name="credits_app_name">Arbres remarquables de Paris</string>
 
     <string name="html_asset_format">%1$d-fr.html</string>
-    
+    <string name="year">"Année de plantation"</string>
+    <string name="gender_species_variety">Genre Espèce Variété</string>
 
 </resources>
