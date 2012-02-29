@@ -2,10 +2,17 @@
 <resources>
     <string name="app_name">Remarkable Trees</string>
     
+    <string name="button_list_around">List around</string>
+    <string name="button_map">Map</string>
+    <string name="button_ar">Augmented reality</string>
+    <string name="button_about">About</string>
+    
     <!-- Credits screen -->
     <string name="credits_current_version">Version 1.0</string>
     <string name="credits_app_name">Remarkable Trees of Paris</string>
     
     <string name="html_asset_format">%1$d-en.html</string>
+    <string name="year">Planting year</string>
+    <string name="gender_species_variety">Gender species</string>
 
 </resources>

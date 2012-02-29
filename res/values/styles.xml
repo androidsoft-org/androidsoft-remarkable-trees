@@ -5,6 +5,17 @@
     
     </style>
     
+    <style name="dashboard_button">
+        <item name="android:padding">@dimen/padding_dashboard_button</item>
+    </style>
+    
+    <style name="dashboard_label">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">@dimen/large_font</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/padding_dashboard_label</item>
+    </style>
+    
     <style name="text_title" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/green</item>
         <item name="android:textStyle">bold</item>
@@ -15,4 +26,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:padding">20dp</item>
     </style>
+    
+    
+
 </resources>

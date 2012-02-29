@@ -39,11 +39,11 @@ public class DashboardActivity extends Activity implements View.OnClickListener
         setContentView(R.layout.dashboard);
         
         
-        mButtonPOIList = (Button) findViewById( R.id.button_poi_list );
+        mButtonPOIList = (Button) findViewById( R.id.button_list_around );
         mButtonPOIList.setOnClickListener(this); 
-        mButtonPOIMap = (Button) findViewById( R.id.button_poi_map );
+        mButtonPOIMap = (Button) findViewById( R.id.button_map );
         mButtonPOIMap.setOnClickListener(this); 
-        mButtonPOIAR = (Button) findViewById( R.id.button_poi_ar );
+        mButtonPOIAR = (Button) findViewById( R.id.button_ar );
         mButtonPOIAR.setOnClickListener(this); 
         mButtonAbout = (Button) findViewById( R.id.button_about );
         mButtonAbout.setOnClickListener(this); 

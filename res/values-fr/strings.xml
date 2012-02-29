@@ -2,6 +2,12 @@
 <resources>
     <string name="app_name">Arbres remarquables</string>
     
+    <string name="button_list_around">A proximité</string>
+    <string name="button_map">Carte</string>
+    <string name="button_ar">Réalité augmentée</string>
+    <string name="button_about">A propos</string>
+    
+
         <!-- Credits screen -->
     <string name="credits_current_version">Version 1.0</string>
     <string name="credits_app_name">Arbres remarquables de Paris</string>

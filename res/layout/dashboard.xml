@@ -1,27 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent" >
-                      
-    <Button android:id="@+id/button_poi_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="List"/>
-    
-    <Button android:id="@+id/button_poi_map"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Map"/>
-    
-    <Button android:id="@+id/button_poi_ar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AR"/>
 
-    <Button android:id="@+id/button_about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="About"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="2dip"
+              android:orientation="vertical" >
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+         
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+            
+            <Button style="@style/dashboard_button"
+                        android:id="@+id/button_map"
+                        android:layout_width="@dimen/dashboard_button"
+                        android:layout_height="@dimen/dashboard_button"
+                        android:background="@drawable/button_map" />
+                    
+            <TextView style="@+style/dashboard_label"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/button_map" />
+                    
+            <Button style="@style/dashboard_button"
+                        android:id="@+id/button_about"
+                        android:background="@drawable/button_about"
+                        android:layout_width="@dimen/dashboard_button"
+                        android:layout_height="@dimen/dashboard_button" />
+                    
+            <TextView style="@+style/dashboard_label"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/button_about" />
+                  
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+             
+            <Button style="@style/dashboard_button"
+                        android:id="@+id/button_list_around"
+                        android:background="@drawable/button_list_around"
+                        android:layout_width="@dimen/dashboard_button"
+                        android:layout_height="@dimen/dashboard_button" />
+
+            <TextView style="@+style/dashboard_label"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/button_list_around" />
+                    
+            <Button style="@style/dashboard_button"
+                        android:id="@+id/button_ar"
+                        android:background="@drawable/button_ar"
+                        android:layout_width="@dimen/dashboard_button"
+                        android:layout_height="@dimen/dashboard_button" />
+                    
+            <TextView style="@+style/dashboard_label"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="@string/button_ar" />
+                
+        </LinearLayout>
+            
+    </LinearLayout>
 </LinearLayout>
 
