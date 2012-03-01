@@ -4,6 +4,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:padding="2dip"
+              android:background="@drawable/bg_home" 
               android:orientation="vertical" >
     
     <LinearLayout
@@ -23,12 +24,17 @@
                         android:id="@+id/button_map"
                         android:layout_width="@dimen/dashboard_button"
                         android:layout_height="@dimen/dashboard_button"
-                        android:background="@drawable/button_map" />
+                        android:background="@drawable/button_map"
+                        
+            />
                     
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:text="@string/button_map" />
+                          android:text="@string/button_map" 
+                          android:textColor="#1A8A17"
+                          android:textSize="20sp" 
+                        android:textStyle="bold"/>
                     
             <Button style="@style/dashboard_button"
                         android:id="@+id/button_about"
@@ -39,7 +45,10 @@
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:text="@string/button_about" />
+                          android:text="@string/button_about"
+                          android:textColor="#1A8A17"
+                          android:textSize="20sp" 
+                          android:textStyle="bold" />
                   
         </LinearLayout>
         <LinearLayout
@@ -58,7 +67,10 @@
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:text="@string/button_list_around" />
+                          android:text="@string/button_list_around"
+                          android:textColor="#1A8A17"
+                          android:textSize="20sp" 
+                          android:textStyle="bold" />
                     
             <Button style="@style/dashboard_button"
                         android:id="@+id/button_ar"
@@ -69,7 +81,10 @@
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:text="@string/button_ar" />
+                          android:text="@string/button_ar" 
+                          android:textColor="#1A8A17"
+                          android:textSize="10sp" 
+                          android:textStyle="bold"/>
                 
         </LinearLayout>
             
