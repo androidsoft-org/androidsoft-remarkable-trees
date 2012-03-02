@@ -14,5 +14,8 @@
     <string name="html_asset_format">%1$d-en.html</string>
     <string name="year">Planting year</string>
     <string name="gender_species_variety">Gender species</string>
+    
+    <string name="no_location">No location found, nor GPS, nor network</string>
+    <string name="no_distance">Distance not available</string>
 
 </resources>
