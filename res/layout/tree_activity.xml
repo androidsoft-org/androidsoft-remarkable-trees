@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <TextView style="@style/text_title"
+    <TextView style="@style/text_tree_title"
               android:id="@+id/title"
               android:layout_width="match_parent"
               android:gravity="center"

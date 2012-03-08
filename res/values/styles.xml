@@ -11,11 +11,18 @@
     
     <style name="dashboard_label">
         <item name="android:textColor">@color/green</item>
-        <item name="android:textSize">@dimen/large_font</item>
+        <item name="android:textSize">@dimen/dashboard_label</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
         <item name="android:padding">@dimen/padding_dashboard_label</item>
     </style>
     
+    <style name="text_tree_title" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">@dimen/large_font</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="text_title" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/green</item>
         <item name="android:textStyle">bold</item>

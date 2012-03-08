@@ -1,11 +1,22 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/* Copyright (c) 2012 Pierre LEVY androidsoft.org
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package org.androidsoft.opendata.arbres.ui.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,48 +69,56 @@ public class TreeDataFragment extends Fragment
             Bundle savedInstanceState)
     {
         View v = inflater.inflate(R.layout.fragment_tree_data, container, false);
-        
+
         TreeActivity activity = (TreeActivity) getActivity();
 
-        Arbre tree = ArbreService.instance().getTree( activity, activity.getTreeId() );
-        
-        if( tree.getGenre() != null )
+        if (activity == null)
         {
-            final TextView tvVariety = (TextView) v.findViewById(R.id.gender);
-            tvVariety.setText( tree.getGenre());
-        }
-        
-        if( tree.getEspece() != null )
-        {    
-            final TextView tvSpecies = (TextView) v.findViewById(R.id.species);
-            tvSpecies.setText( tree.getEspece());
-        }
-        
-        if( tree.getVariete() != null )
-        {
-            final TextView tvVariety = (TextView) v.findViewById(R.id.variety);
-            tvVariety.setText( tree.getVariete());
-        }
-        
-        if( tree.getHauteur() != null )
-        {
-            final TextView tvHeight = (TextView) v.findViewById(R.id.tree_height);
-            tvHeight.setText( "" + tree.getHauteur() + " m");
-        }
-        
-        if( tree.getCirconference() != null )
-        {
-            final TextView tvCircumference = (TextView) v.findViewById(R.id.tree_circumference);
-            tvCircumference.setText( tree.getCirconference() + " cm");
+            Log.e("Tree", "Activity is null ");
         }
 
-        if( tree.getAnnee() != null )
+        Arbre tree = ArbreService.instance().getTree(activity, activity.getTreeId());
+
+        if (tree != null)
         {
-            final TextView tvYear = (TextView) v.findViewById(R.id.year);
-            tvYear.setText( "" + tree.getAnnee());
+            if (tree.getGenre() != null)
+            {
+                final TextView tvVariety = (TextView) v.findViewById(R.id.gender);
+                tvVariety.setText(tree.getGenre());
+            }
+
+            if (tree.getEspece() != null)
+            {
+                final TextView tvSpecies = (TextView) v.findViewById(R.id.species);
+                tvSpecies.setText(tree.getEspece());
+            }
+
+            if (tree.getVariete() != null)
+            {
+                final TextView tvVariety = (TextView) v.findViewById(R.id.variety);
+                tvVariety.setText(tree.getVariete());
+            }
+
+            if (tree.getHauteur() != null)
+            {
+                final TextView tvHeight = (TextView) v.findViewById(R.id.tree_height);
+                tvHeight.setText("" + tree.getHauteur() + " m");
+            }
+
+            if (tree.getCirconference() != null)
+            {
+                final TextView tvCircumference = (TextView) v.findViewById(R.id.tree_circumference);
+                tvCircumference.setText(tree.getCirconference() + " cm");
+            }
+
+            if (tree.getAnnee() != null)
+            {
+                final TextView tvYear = (TextView) v.findViewById(R.id.year);
+                tvYear.setText("" + tree.getAnnee());
+            }
         }
-        
-            
+
         return v;
     }
+    
 }

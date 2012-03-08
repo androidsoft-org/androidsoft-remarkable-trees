@@ -15,6 +15,7 @@
 package org.androidsoft.opendata.arbres.ui.adapter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,14 +33,18 @@ import org.androidsoft.poi.ui.adapter.POIAdapter;
  */
 public class TreesAdapter extends POIAdapter
 {
+    private boolean mDistanceAvailable;
+    private Context mContext;
     /**
      * Constructor
      * @param activity
      * @param list 
      */
-    public TreesAdapter( Activity activity , List<POI> list )
+    public TreesAdapter( Activity activity , List<POI> list , boolean distanceAvailable )
     {
         super( activity , list );
+        mDistanceAvailable = distanceAvailable;
+        mContext = activity.getApplicationContext();
     }
     
         /**
@@ -70,8 +75,15 @@ public class TreesAdapter extends POIAdapter
         tvDescription.setText(poi.getDescription());
 
         final TextView tvDistance = (TextView) convertView.findViewById(R.id.distance);
-        tvDistance.setText(""  + poi.getDistance() + " m");
-
+        if( mDistanceAvailable )
+        {
+            tvDistance.setText(""  + poi.getDistance() + " m");
+        }
+        else
+        {
+            tvDistance.setText( mContext.getString(R.string.no_distance ));
+        }
+        
         return convertView;        
     }
 
