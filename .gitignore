@@ -4,3 +4,8 @@
 /tmp/
 /local.properties
 /nbandroid/private.properties
+/ant.properties
+/build.properties
+/default.properties
+/proguard.cfg
+/build.xml

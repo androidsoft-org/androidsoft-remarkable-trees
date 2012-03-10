@@ -14,12 +14,14 @@
  */
 package org.androidsoft.opendata.arbres.ui.activity;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.widget.TabHost;
 import android.widget.TextView;
+import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.Extra;
+import com.googlecode.androidannotations.annotations.ViewById;
 import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.opendata.arbres.model.Arbre;
@@ -32,70 +34,49 @@ import org.androidsoft.opendata.arbres.ui.fragment.TreeDescriptionFragment;
  *
  * @author pierre
  */
+@EActivity(R.layout.tree_activity)
 public class TreeActivity extends FragmentActivity
 {
-    private static final String KEY_TREE_ID = "tree_id";
 
-    private TabHost mTabHost;
-    private ViewPager mViewPager;
+    @ViewById(android.R.id.tabhost)
+    TabHost mTabHost;
+    @ViewById(R.id.title)
+    TextView mTitle;
+    @ViewById(R.id.address)
+    TextView mAddress;
+    @Extra(Constants.TREE_ID)
+    int mTreeId;
+
+    ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
-    private int mTreeId;
+    
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
+    @AfterViews
+    void initUI()
     {
-        Intent intent = getIntent();
-        mTreeId = intent.getIntExtra(Constants.TREE_ID, 0);
-
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.tree_activity);
-
-
-        mTabHost = (TabHost) findViewById(android.R.id.tabhost);
-
         if (mTabHost != null)
         {
             mTabHost.setup();
 
             mViewPager = (ViewPager) findViewById(R.id.pager);
-
             mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
 
             mTabsAdapter.addTab(mTabHost.newTabSpec("data").setIndicator("Caractéristiques"),
                     TreeDataFragment.class, null);
             mTabsAdapter.addTab(mTabHost.newTabSpec("description").setIndicator("Description"),
                     TreeDescriptionFragment.class, null);
-
-            if (savedInstanceState != null)
-            {
-                mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
-            }
-
+            /*
+             * if (savedInstanceState != null) {
+             * mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
+             * }
+             */
         }
-        else
-        {
-//            Fragment dataFragment = getFragmentManager().findFragmentById( R.id.tree_data_fragment );
-            
-        }
+
         Arbre arbre = ArbreService.instance().getTree(this, mTreeId);
-        TextView tvTitle = (TextView) findViewById(R.id.title);
-        tvTitle.setText(arbre.getNomCommun());
 
-        TextView tvAddress = (TextView) findViewById(R.id.address);
-        tvAddress.setText(arbre.getEspaceVert());
+        mTitle.setText(arbre.getNomCommun());
+        mAddress.setText(arbre.getEspaceVert());
     }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState)
-    {
-        super.onSaveInstanceState(outState);
-        if( mTabHost != null )
-        {
-            outState.putString("tab", mTabHost.getCurrentTabTag());
-        }
-    }
-
 
     public int getTreeId()
     {

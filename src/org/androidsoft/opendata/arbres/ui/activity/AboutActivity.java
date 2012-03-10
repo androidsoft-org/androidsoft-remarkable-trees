@@ -18,6 +18,7 @@ import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import com.googlecode.androidannotations.annotations.EActivity;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.utils.credits.CreditsParams;
 import org.androidsoft.utils.credits.CreditsView;
@@ -26,6 +27,7 @@ import org.androidsoft.utils.credits.CreditsView;
  *
  * @author pierre
  */
+@EActivity
 public class AboutActivity extends Activity
 {
 

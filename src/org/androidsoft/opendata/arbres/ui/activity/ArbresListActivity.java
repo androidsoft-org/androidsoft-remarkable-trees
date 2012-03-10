@@ -17,7 +17,6 @@ package org.androidsoft.opendata.arbres.ui.activity;
 import org.androidsoft.opendata.arbres.ui.adapter.TreesAdapter;
 import android.content.Intent;
 import android.location.Location;
-import android.os.Bundle;
 import android.widget.Toast;
 import java.util.List;
 import org.androidsoft.opendata.arbres.Constants;
@@ -34,14 +33,6 @@ import org.androidsoft.poi.ui.adapter.POIAdapter;
  */
 public class ArbresListActivity extends POIListActivity 
 {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-    }
-    
-    
     @Override
     protected int getLayout()
     {
