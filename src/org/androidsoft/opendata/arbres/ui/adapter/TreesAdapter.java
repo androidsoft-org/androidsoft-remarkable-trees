@@ -28,8 +28,8 @@ import org.androidsoft.poi.model.POI;
 import org.androidsoft.poi.ui.adapter.POIAdapter;
 
 /**
- *
- * @author pierre
+ * Trees Adapter
+ * @author Pierre LEVY
  */
 public class TreesAdapter extends POIAdapter
 {

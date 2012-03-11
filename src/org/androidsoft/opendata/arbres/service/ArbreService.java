@@ -20,8 +20,8 @@ import org.androidsoft.opendata.arbres.model.Arbre;
 import org.androidsoft.poi.service.POIService;
 
 /**
- *
- * @author pierre
+ * Arbre Service
+ * @author Pierre LEVY
  */
 public class ArbreService extends POIService<Arbre>
 {

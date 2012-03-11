@@ -15,7 +15,6 @@
 package org.androidsoft.opendata.arbres.ui.activity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import com.jwetherell.augmented_reality.data.ARData;
@@ -27,8 +26,8 @@ import org.androidsoft.poi.ar.POIDataSource;
 import org.androidsoft.poi.ui.activity.POIARActivity;
 
 /**
- *
- * @author pierre
+ * Augmented Reality Activity
+ * @author Pierre LEVY
  */
 public class ArbresARActivity extends POIARActivity
 {
@@ -73,7 +72,5 @@ public class ArbresARActivity extends POIARActivity
         intent.putExtra(Constants.TREE_ID, id );
         startActivity(intent);
     }
-    
-
     
 }

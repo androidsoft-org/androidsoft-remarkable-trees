@@ -21,6 +21,11 @@ import com.googlecode.androidannotations.annotations.EActivity;
 import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 
+/**
+ * Dashboard Activity
+ * @author Pierre LEVY
+ */
+
 @EActivity( R.layout.dashboard)
 public class DashboardActivity extends Activity
 {

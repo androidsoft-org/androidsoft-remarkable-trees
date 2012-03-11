@@ -18,8 +18,8 @@ import android.util.Log;
 import org.androidsoft.poi.model.AbstractPOI;
 
 /**
- *
- * @author pierre
+ * Arbre
+ * @author Pierre LEVY
  */
 public class Arbre extends AbstractPOI
 {

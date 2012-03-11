@@ -28,8 +28,8 @@ import org.androidsoft.poi.ui.activity.POIListActivity;
 import org.androidsoft.poi.ui.adapter.POIAdapter;
 
 /**
- *
- * @author pierre
+ * Tree list Activity
+ * @author Pierre LEVY
  */
 public class ArbresListActivity extends POIListActivity 
 {

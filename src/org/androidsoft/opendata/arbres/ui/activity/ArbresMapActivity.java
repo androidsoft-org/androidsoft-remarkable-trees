@@ -25,8 +25,8 @@ import org.androidsoft.poi.ui.activity.POIMapActivity;
 import org.androidsoft.poi.map.POIOverlayResources;
 
 /**
- *
- * @author pierre
+ * Map Activity
+ * @author Pierre LEVY
  */
 public class ArbresMapActivity extends POIMapActivity
 {

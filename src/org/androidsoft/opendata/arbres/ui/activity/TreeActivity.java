@@ -31,8 +31,8 @@ import org.androidsoft.opendata.arbres.ui.fragment.TreeDataFragment;
 import org.androidsoft.opendata.arbres.ui.fragment.TreeDescriptionFragment;
 
 /**
- *
- * @author pierre
+ * Tree Activity
+ * @author Pierre LEVY
  */
 @EActivity(R.layout.tree_activity)
 public class TreeActivity extends FragmentActivity
@@ -65,11 +65,6 @@ public class TreeActivity extends FragmentActivity
                     TreeDataFragment.class, null);
             mTabsAdapter.addTab(mTabHost.newTabSpec("description").setIndicator("Description"),
                     TreeDescriptionFragment.class, null);
-            /*
-             * if (savedInstanceState != null) {
-             * mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
-             * }
-             */
         }
 
         Arbre arbre = ArbreService.instance().getTree(this, mTreeId);

@@ -27,8 +27,8 @@ import android.widget.TabWidget;
 import java.util.ArrayList;
 
 /**
- *
- * @author pierre
+ * Tabs Adapter
+ * @author Pierre LEVY
  */
 public class TabsAdapter extends FragmentPagerAdapter
         implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener

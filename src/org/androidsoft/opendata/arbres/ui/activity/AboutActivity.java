@@ -24,8 +24,8 @@ import org.androidsoft.utils.credits.CreditsParams;
 import org.androidsoft.utils.credits.CreditsView;
 
 /**
- *
- * @author pierre
+ * About Activity
+ * @author Pierre LEVY
  */
 @EActivity
 public class AboutActivity extends Activity

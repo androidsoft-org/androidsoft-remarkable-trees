@@ -27,8 +27,8 @@ import org.androidsoft.opendata.arbres.service.ArbreService;
 import org.androidsoft.opendata.arbres.ui.activity.TreeActivity;
 
 /**
- *
- * @author pierre
+ * Tree Data Fragment
+ * @author Pierre LEVY
  */
 public class TreeDataFragment extends Fragment
 {

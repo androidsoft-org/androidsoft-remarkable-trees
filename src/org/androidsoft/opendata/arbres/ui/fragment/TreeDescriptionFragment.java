@@ -26,13 +26,9 @@ import org.androidsoft.opendata.arbres.ui.activity.TreeActivity;
 import org.androidsoft.utils.res.ResourceImageGetter;
 import org.androidsoft.utils.res.ResourceUtils;
 
-/*
- * To change this template, choose Tools | Templates and open the template in
- * the editor.
- */
 /**
- *
- * @author pierre
+ * Tree Description Fragment
+ * @author Pierre LEVY
  */
 public class TreeDescriptionFragment extends Fragment
 {
