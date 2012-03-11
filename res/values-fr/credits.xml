@@ -14,22 +14,59 @@
         <item>*Ces données et la licence sont disponibles</item>
         <item>*sur le site : </item>
         <item>*</item>
-        <item>http://opendata.paris.fr</item>
+        <item>*http://opendata.paris.fr</item>
         <item>*</item>
         <item>*</item>
         <item>*</item>
         <item>-= Credits =-</item>
         <item>*</item>
-        <item>Directrice Artistique</item>
         <item>*Michele Roohani</item>
+        <item>*(Directrice Artistique)</item>
         <item>*</item>
         <item>*</item>
-        <item>Développeur</item>
         <item>*Pierre Levy</item>
+        <item>*(Project Lead et Développeur)</item>
+        <item>*</item>
+        <item>*</item>
+        <item>-= Licence =-</item>
+        <item>*</item>
+        <item>*Ce programme est un logiciel libre,</item>
+        <item>*vous pouvez le redistribuer et/ou </item>
+        <item>*le modifier selon les termes de la </item>
+        <item>*Licence Publique Générale GNU publiée</item>
+        <item>*par la Free Software Foundation</item>
+        <item>*(version 3 ou ultérieure)</item>
         <item>*</item>
         <item>*</item>
         <item>*</item>
+        <item>-= Open source =-</item>
         <item>*</item>
+        <item>*Ce logiciel a pu être réalisé </item>
+        <item>*grâce aux travaux de plusieurs</item>
+        <item>*développeurs open source</item>
+        <item>*</item>
+        <item>*Justin Wetherell</item>
+        <item>*(android-augment-reality-framework) </item>
+        <item>*</item>
+        <item>*Jeff Gilfelt</item>
+        <item>*(android-mapviewballoons)</item>
+        <item>*</item>
+        <item>*Glen Smith</item>
+        <item>*(opencsv)</item>
+        <item>*</item>
+        <item>*Pierre-Yves Ricau</item>
+        <item>*(androidannotations)</item>
+        <item>*</item>
+        <item>*</item>
+        <item>*</item>
+        <item>-= Remerciements =-</item>
+        <item>*</item>
+        <item>*La Mairie de Paris</item>
+        <item>*Frank Harper</item>
+        <item>*</item>
+        <item>*</item>
+        <item>*</item>
+        <item>*http://www.androidsoft.org</item>
         <item>*Copyright (c) 2012 Tous droits réservés</item>
     </array>
 </resources>
