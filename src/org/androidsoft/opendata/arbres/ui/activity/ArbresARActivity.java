@@ -15,8 +15,11 @@
 package org.androidsoft.opendata.arbres.ui.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import com.jwetherell.augmented_reality.data.ARData;
+import com.jwetherell.augmented_reality.ui.CustomParams;
 import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 import org.androidsoft.opendata.arbres.service.ArbreService;
@@ -41,9 +44,24 @@ public class ArbresARActivity extends POIARActivity
         POIDataSource localData = new POIDataSource( this , new ArbreService(), R.drawable.icon );
         
         ARData.addMarkers(localData.getMarkers());
+        
+        CustomParams.setRadarColor( getResources().getColor( R.color.radar ));
 
     }
     
+    @Override
+    protected Drawable getCustomSeekbarDrawable()
+    {
+        return getResources().getDrawable( R.drawable.seekbar );
+    }
+            
+
+    @Override
+    protected Drawable getCustomThumbDrawable()
+    {
+        return getResources().getDrawable( R.drawable.seekbar_thumb );
+    }
+            
     public void onPOITap(int id)
     {
         startTreeActivity(id);
