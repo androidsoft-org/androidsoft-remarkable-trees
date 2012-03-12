@@ -4,6 +4,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
               android:padding="2dip"
+              android:background="@drawable/bg_home" 
               android:orientation="vertical" >
     
     <LinearLayout
@@ -27,7 +28,7 @@
                     
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
+                          android:layout_height="@dimen/dashboard_label_height"
                           android:text="@string/button_map" />
                     
             <Button style="@style/dashboard_button"
@@ -38,7 +39,7 @@
                     
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
+                          android:layout_height="@dimen/dashboard_label_height"
                           android:text="@string/button_about" />
                   
         </LinearLayout>
@@ -57,7 +58,7 @@
 
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
+                          android:layout_height="@dimen/dashboard_label_height"
                           android:text="@string/button_list_around" />
                     
             <Button style="@style/dashboard_button"
@@ -68,8 +69,8 @@
                     
             <TextView style="@+style/dashboard_label"
                           android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="@string/button_ar" />
+                          android:layout_height="@dimen/dashboard_label_height"
+                          android:text="@string/button_ar"/>
                 
         </LinearLayout>
             

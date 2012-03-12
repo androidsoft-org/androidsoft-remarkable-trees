@@ -17,7 +17,7 @@ package org.androidsoft.opendata.arbres.ui.activity;
 import org.androidsoft.opendata.arbres.ui.adapter.TreesAdapter;
 import android.content.Intent;
 import android.location.Location;
-import android.os.Bundle;
+import android.widget.Toast;
 import java.util.List;
 import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
@@ -28,19 +28,11 @@ import org.androidsoft.poi.ui.activity.POIListActivity;
 import org.androidsoft.poi.ui.adapter.POIAdapter;
 
 /**
- *
- * @author pierre
+ * Tree list Activity
+ * @author Pierre LEVY
  */
 public class ArbresListActivity extends POIListActivity 
 {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-    }
-    
-    
     @Override
     protected int getLayout()
     {
@@ -58,17 +50,24 @@ public class ArbresListActivity extends POIListActivity
     {
         ArbreService service = new ArbreService();
         List list = service.getPOIs(this);
-        double latitude = 2.34;
-        double longitude = 48.8;
+        double latitude = 48.8;
+        double longitude = 2.34;
+        boolean distanceAvailable;
         Location location = LocationService.getLocation(this);
         if( location != null )
         {
             latitude = location.getLatitude();
             longitude = location.getLongitude();
+            distanceAvailable = true;
+        }
+        else
+        {
+            Toast.makeText(this, getString( R.string.no_location ), Toast.LENGTH_LONG).show();
+            distanceAvailable = false;
         }
         list = POIService.getNearestPOI(list, latitude, longitude, 60, 1000000000 );
 
-        return new TreesAdapter(this, list );
+        return new TreesAdapter(this, list , distanceAvailable );
     }
 
     public void onPOITap(int id)

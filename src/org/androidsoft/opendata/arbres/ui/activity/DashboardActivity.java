@@ -16,81 +16,43 @@ package org.androidsoft.opendata.arbres.ui.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import com.googlecode.androidannotations.annotations.Click;
+import com.googlecode.androidannotations.annotations.EActivity;
 import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 
-public class DashboardActivity extends Activity implements View.OnClickListener
-{
-    
-    private Button mButtonPOIList;
-    private Button mButtonPOIMap;
-    private Button mButtonPOIAR;
-    private Button mButtonAbout;
-            
-    
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.dashboard);
-        
-        
-        mButtonPOIList = (Button) findViewById( R.id.button_list_around );
-        mButtonPOIList.setOnClickListener(this); 
-        mButtonPOIMap = (Button) findViewById( R.id.button_map );
-        mButtonPOIMap.setOnClickListener(this); 
-        mButtonPOIAR = (Button) findViewById( R.id.button_ar );
-        mButtonPOIAR.setOnClickListener(this); 
-        mButtonAbout = (Button) findViewById( R.id.button_about );
-        mButtonAbout.setOnClickListener(this); 
-        
-        
-    }
-    
-    public void onClick(View v)
-    {
-        if( v == mButtonPOIList )
-        {
-            startPoiList();
-        }
-        else if( v == mButtonPOIMap )
-        {
-            startPoiMap();
-        }
-        else if( v == mButtonPOIAR )
-        {
-            startPoiAR();
-        }
-        else if( v == mButtonAbout )
-        {
-            startAbout();
-        }
-    }
+/**
+ * Dashboard Activity
+ * @author Pierre LEVY
+ */
 
-    
-    private void startPoiList()
+@EActivity( R.layout.dashboard)
+public class DashboardActivity extends Activity
+{
+
+    @Click( R.id.button_list_around )
+    void startPoiList()
     {
         Intent intent = new Intent( Constants.ACTION_DISPLAY_POI_LIST );
         startActivity(intent);
     }
 
-    private void startPoiMap()
+    @Click( R.id.button_map )
+    void startPoiMap()
     {
         Intent intent = new Intent( Constants.ACTION_DISPLAY_POI_MAP );
         startActivity(intent);
     }
 
-    private void startPoiAR()
+    @Click( R.id.button_ar )
+    void startPoiAR()
     {
         Intent intent = new Intent( Constants.ACTION_DISPLAY_POI_AR );
         startActivity(intent);
     }
 
-    private void startAbout()
+    @Click( R.id.button_about )
+    void startAbout()
     {
         Intent intent = new Intent( Constants.ACTION_ABOUT );
         startActivity(intent);

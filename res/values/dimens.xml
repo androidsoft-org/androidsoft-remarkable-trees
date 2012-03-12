@@ -3,8 +3,10 @@
 <!-- DIMENSIONS FOR PHONES -->
 <resources>
     <dimen name="dashboard_button">70dp</dimen>
-    <dimen name="padding_dashboard_button">30dp</dimen>
-    <dimen name="padding_dashboard_label">10dp</dimen>
+    <dimen name="padding_dashboard_button">10dp</dimen>
+    <dimen name="padding_dashboard_label">5dp</dimen>
+    <dimen name="dashboard_label">20sp</dimen>
+    <dimen name="dashboard_label_height">70dp</dimen>
     <dimen name="large_font">16sp</dimen>
     <dimen name="padding">10dp</dimen>
     <dimen name="padding_pane">10dp</dimen>

@@ -41,11 +41,14 @@
             <ImageView android:src="@drawable/height"
                        android:layout_width="60dp"
                        android:layout_height="60dp"
+                       android:gravity="right"
+                       android:layout_gravity="right"
                        android:layout_weight="1"/>
             <TextView   style="@style/text_data"
                         android:id="@+id/tree_height"
                         android:layout_width="0dp"
                         android:gravity="left"
+                        android:layout_gravity="left"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"/>
         </LinearLayout>

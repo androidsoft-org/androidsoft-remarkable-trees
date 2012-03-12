@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DIMENSIONS FOR TABLETS -->
+<resources>
+    <dimen name="dashboard_button">160dp</dimen>
+    <dimen name="padding_dashboard_button">50dp</dimen>
+    <dimen name="padding_dashboard_label">10dp</dimen>
+    <dimen name="dashboard_label">40sp</dimen>
+    <dimen name="dashboard_label_height">100dp</dimen>
+    <dimen name="large_font">30sp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="padding_pane">10dp</dimen>
+    <dimen name="padding_text">2dp</dimen>
+    <dimen name="padding_icon">8dp</dimen>
+    <dimen name="icon_small_app">50dp</dimen>
+    <dimen name="medium_font">12sp</dimen>
+</resources>

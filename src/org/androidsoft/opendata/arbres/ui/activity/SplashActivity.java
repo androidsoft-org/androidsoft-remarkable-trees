@@ -21,6 +21,10 @@ import android.view.MotionEvent;
 import org.androidsoft.opendata.arbres.Constants;
 import org.androidsoft.opendata.arbres.R;
 
+/**
+ * Splash Activity 
+ * @author Pierre LEVY
+ */
 public class SplashActivity extends Activity
 {
 

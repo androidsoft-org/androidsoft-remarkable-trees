@@ -15,8 +15,8 @@
 package org.androidsoft.opendata.arbres;
 
 /**
- *
- * @author pierre
+ * Constants
+ * @author Pierre LEVY
  */
 public class Constants
 {
