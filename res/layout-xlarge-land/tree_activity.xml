@@ -6,29 +6,36 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <TextView style="@style/text_tree_title"
-              android:id="@+id/title"
-              android:layout_width="match_parent"
-              android:gravity="center"
-              android:padding="4dp"
-              android:layout_height="wrap_content"/>
+        <TextView style="@style/text_tree_title"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:padding="4dp"
+                android:layout_height="wrap_content"/>
               
-    <TextView android:id="@+id/address"
-              android:layout_width="match_parent"
-              android:gravity="center"
-              android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+    
+        <ImageView android:id="@+id/button_show_on_map"
+                android:src="@drawable/button_show_on_map"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/> 
 
     <LinearLayout 
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <fragment class="org.androidsoft.opendata.arbres.ui.fragment.TreeDataFragment"
+        <fragment class="org.androidsoft.opendata.remarkabletrees.ui.fragment.TreeDataFragment"
             android:id="@+id/tree_data_fragment"
             android:layout_width="400dp"
             android:layout_height="match_parent"/>
 
-        <fragment class="org.androidsoft.opendata.arbres.ui.fragment.TreeDescriptionFragment"
+        <fragment class="org.androidsoft.opendata.remarkabletrees.ui.fragment.TreeDescriptionFragment"
             android:id="@+id/tree_description_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

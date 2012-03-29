@@ -12,14 +12,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
+package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import com.googlecode.androidannotations.annotations.EActivity;
-import org.androidsoft.opendata.arbres.R;
+import org.androidsoft.opendata.remarkabletrees.R;
 import org.androidsoft.utils.credits.CreditsParams;
 import org.androidsoft.utils.credits.CreditsView;
 

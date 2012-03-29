@@ -12,7 +12,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.fragment;
+package org.androidsoft.opendata.remarkabletrees.ui.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,8 +21,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import org.androidsoft.opendata.arbres.R;
-import org.androidsoft.opendata.arbres.ui.activity.TreeActivity;
+import org.androidsoft.opendata.remarkabletrees.R;
+import org.androidsoft.opendata.remarkabletrees.ui.activity.TreeActivity;
 import org.androidsoft.utils.res.ResourceImageGetter;
 import org.androidsoft.utils.res.ResourceUtils;
 
@@ -32,34 +32,6 @@ import org.androidsoft.utils.res.ResourceUtils;
  */
 public class TreeDescriptionFragment extends Fragment
 {
-
-    int mNum;
-
-    /**
-     * Create a new instance of CountingFragment, providing "num" as an
-     * argument.
-     */
-    static TreeDescriptionFragment newInstance(int num)
-    {
-        TreeDescriptionFragment f = new TreeDescriptionFragment();
-
-        // Supply num input as an argument.
-        Bundle args = new Bundle();
-        args.putInt("num", num);
-        f.setArguments(args);
-
-        return f;
-    }
-
-    /**
-     * When creating, retrieve this instance's number from its arguments.
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        mNum = getArguments() != null ? getArguments().getInt("num") : 1;
-    }
 
     /**
      * The Fragment's UI is just a simple text view showing its instance number.

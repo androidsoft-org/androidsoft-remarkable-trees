@@ -2,7 +2,7 @@
 
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.androidsoft.opendata.arbres"
+          package="org.androidsoft.opendata.remarkabletrees"
           android:versionCode="1"
           android:versionName="1.0">
           
@@ -33,31 +33,31 @@
                   android:label="@string/app_name"
                   android:theme="@style/TreeTheme">
             <intent-filter>
-                <action android:name="org.androidsoft.opendata.arbres.ACTION_DASHBOARD" />
+                <action android:name="org.androidsoft.opendata.remarkabletrees.ACTION_DASHBOARD" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.ArbresListActivity"
+        <activity android:name=".ui.activity.TreesListActivity"
                   android:label="@string/app_name"
                   android:theme="@style/TreeTheme">
             <intent-filter>
-                <action android:name="org.androidsoft.opendata.arbres.ACTION_LIST" />
+                <action android:name="org.androidsoft.opendata.remarkabletrees.ACTION_LIST" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.ArbresMapActivity"
+        <activity android:name=".ui.activity.TreesMapActivity"
                   android:label="@string/app_name"
                   android:theme="@style/TreeTheme">
             <intent-filter>
-                <action android:name="org.androidsoft.opendata.arbres.ACTION_MAP" />
+                <action android:name="org.androidsoft.opendata.remarkabletrees.ACTION_MAP" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.ArbresARActivity"
+        <activity android:name=".ui.activity.TreesARActivity"
                   android:label="@string/app_name"
                   android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
-                <action android:name="org.androidsoft.opendata.arbres.ACTION_AR" />
+                <action android:name="org.androidsoft.opendata.remarkabletrees.ACTION_AR" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -65,7 +65,7 @@
                   android:label="@string/app_name"
                   android:theme="@style/TreeTheme">
             <intent-filter>
-                <action android:name="org.androidsoft.opendata.arbres.ACTION_ABOUT" />
+                <action android:name="org.androidsoft.opendata.remarkabletrees.ACTION_ABOUT" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -73,7 +73,7 @@
                   android:label="@string/app_name"
                   android:theme="@style/TreeTheme">
             <intent-filter>
-                <action android:name="org.androidsoft.opendata.arbres.ACTION_ARBRE" />
+                <action android:name="org.androidsoft.opendata.remarkabletrees.ACTION_ARBRE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

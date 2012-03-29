@@ -12,26 +12,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
+package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.TabHost;
 import android.widget.TextView;
 import com.googlecode.androidannotations.annotations.AfterViews;
+import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
 import com.googlecode.androidannotations.annotations.Extra;
+import com.googlecode.androidannotations.annotations.OptionsItem;
 import com.googlecode.androidannotations.annotations.ViewById;
-import org.androidsoft.opendata.arbres.Constants;
-import org.androidsoft.opendata.arbres.R;
-import org.androidsoft.opendata.arbres.model.Arbre;
-import org.androidsoft.opendata.arbres.service.ArbreService;
-import org.androidsoft.opendata.arbres.ui.adapter.TabsAdapter;
-import org.androidsoft.opendata.arbres.ui.fragment.TreeDataFragment;
-import org.androidsoft.opendata.arbres.ui.fragment.TreeDescriptionFragment;
+import org.androidsoft.opendata.remarkabletrees.Constants;
+import org.androidsoft.opendata.remarkabletrees.R;
+import org.androidsoft.opendata.remarkabletrees.model.RemarkableTree;
+import org.androidsoft.opendata.remarkabletrees.service.TreesService;
+import org.androidsoft.opendata.remarkabletrees.ui.adapter.TabsAdapter;
+import org.androidsoft.opendata.remarkabletrees.ui.fragment.TreeDataFragment;
+import org.androidsoft.opendata.remarkabletrees.ui.fragment.TreeDescriptionFragment;
 
 /**
  * Tree Activity
+ *
  * @author Pierre LEVY
  */
 @EActivity(R.layout.tree_activity)
@@ -44,12 +49,12 @@ public class TreeActivity extends FragmentActivity
     TextView mTitle;
     @ViewById(R.id.address)
     TextView mAddress;
+    @ViewById(R.id.button_show_on_map)
+    View mButtonShowOnMap;
     @Extra(Constants.TREE_ID)
     int mTreeId;
-
     ViewPager mViewPager;
     private TabsAdapter mTabsAdapter;
-    
 
     @AfterViews
     void initUI()
@@ -67,7 +72,7 @@ public class TreeActivity extends FragmentActivity
                     TreeDescriptionFragment.class, null);
         }
 
-        Arbre arbre = ArbreService.instance().getTree(this, mTreeId);
+        RemarkableTree arbre = TreesService.instance().getTree(this, mTreeId);
 
         mTitle.setText(arbre.getNomCommun());
         mAddress.setText(arbre.getEspaceVert());
@@ -76,5 +81,23 @@ public class TreeActivity extends FragmentActivity
     public int getTreeId()
     {
         return mTreeId;
+    }
+
+    @Click(R.id.button_show_on_map)
+    public void onShowOnMap()
+    {
+        RemarkableTree tree = TreesService.instance().getTree(this, mTreeId);
+        Intent intent = new Intent(Constants.ACTION_DISPLAY_POI_MAP);
+        intent.putExtra(TreesMapActivity.EXTRA_POINT_LAT, tree.getLatitude());
+        intent.putExtra(TreesMapActivity.EXTRA_POINT_LON, tree.getLongitude());
+        startActivity(intent);
+    }
+
+    @OptionsItem(android.R.id.home)
+    public void onHome()
+    {
+        Intent intent = new Intent( Constants.ACTION_DASHBOARD );
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

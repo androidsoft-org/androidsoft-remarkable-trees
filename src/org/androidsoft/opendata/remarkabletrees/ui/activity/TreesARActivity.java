@@ -12,16 +12,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
+package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import com.jwetherell.augmented_reality.data.ARData;
 import com.jwetherell.augmented_reality.ui.CustomParams;
-import org.androidsoft.opendata.arbres.Constants;
-import org.androidsoft.opendata.arbres.R;
-import org.androidsoft.opendata.arbres.service.ArbreService;
+import org.androidsoft.opendata.remarkabletrees.Constants;
+import org.androidsoft.opendata.remarkabletrees.R;
+import org.androidsoft.opendata.remarkabletrees.service.TreesService;
 import org.androidsoft.poi.ar.POIDataSource;
 import org.androidsoft.poi.ui.activity.POIARActivity;
 
@@ -29,7 +29,7 @@ import org.androidsoft.poi.ui.activity.POIARActivity;
  * Augmented Reality Activity
  * @author Pierre LEVY
  */
-public class ArbresARActivity extends POIARActivity
+public class TreesARActivity extends POIARActivity
 {
     /**
      * {@inheritDoc}
@@ -40,7 +40,7 @@ public class ArbresARActivity extends POIARActivity
         super.onCreate(savedInstanceState);
 
         //Local
-        POIDataSource localData = new POIDataSource( this , new ArbreService(), R.drawable.icon );
+        POIDataSource localData = new POIDataSource( this , new TreesService(), R.drawable.icon );
         
         ARData.addMarkers(localData.getMarkers());
         

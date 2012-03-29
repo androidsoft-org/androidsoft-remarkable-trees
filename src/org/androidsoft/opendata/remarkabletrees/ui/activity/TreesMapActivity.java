@@ -12,13 +12,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
+package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.content.Intent;
 import java.util.List;
-import org.androidsoft.opendata.arbres.Constants;
-import org.androidsoft.opendata.arbres.R;
-import org.androidsoft.opendata.arbres.service.ArbreService;
+import org.androidsoft.opendata.remarkabletrees.Constants;
+import org.androidsoft.opendata.remarkabletrees.R;
+import org.androidsoft.opendata.remarkabletrees.service.TreesService;
 import org.androidsoft.poi.model.POI;
 import org.androidsoft.poi.service.POIService;
 import org.androidsoft.poi.ui.activity.POIMapActivity;
@@ -28,12 +28,13 @@ import org.androidsoft.poi.map.POIOverlayResources;
  * Map Activity
  * @author Pierre LEVY
  */
-public class ArbresMapActivity extends POIMapActivity
+public class TreesMapActivity extends POIMapActivity
 {
     private static final int ZOOM = 15;
+    private static final int ZOOM_FOCUSED = 18;
     private static final int BOTTOM_OFFSET = 48;
 
-    private POIService mPOIService = new ArbreService();
+    private POIService mPOIService = new TreesService();
 
     @Override
     public int getMapViewId()
@@ -77,6 +78,12 @@ public class ArbresMapActivity extends POIMapActivity
     protected int getZoom()
     {
         return ZOOM;
+    }
+
+    @Override
+    protected int getFocusedZoom()
+    {
+        return ZOOM_FOCUSED;
     }
 
     public void onPOITap(int id)

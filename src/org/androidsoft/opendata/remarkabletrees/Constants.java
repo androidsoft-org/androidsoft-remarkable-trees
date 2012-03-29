@@ -12,7 +12,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres;
+package org.androidsoft.opendata.remarkabletrees;
 
 /**
  * Constants
@@ -20,12 +20,13 @@ package org.androidsoft.opendata.arbres;
  */
 public class Constants
 {
-    public static final String ACTION_DASHBOARD = "org.androidsoft.opendata.arbres.ACTION_DASHBOARD";
-    public static final String ACTION_DISPLAY_POI_LIST = "org.androidsoft.opendata.arbres.ACTION_LIST";
-    public static final String ACTION_DISPLAY_POI_MAP = "org.androidsoft.opendata.arbres.ACTION_MAP";
-    public static final String ACTION_DISPLAY_POI_AR = "org.androidsoft.opendata.arbres.ACTION_AR";
-    public static final String ACTION_ABOUT = "org.androidsoft.opendata.arbres.ACTION_ABOUT";
-    public static final String ACTION_TREE = "org.androidsoft.opendata.arbres.ACTION_ARBRE";
+    public static final String ACTION_DASHBOARD = "org.androidsoft.opendata.remarkabletrees.ACTION_DASHBOARD";
+    public static final String ACTION_DISPLAY_POI_LIST = "org.androidsoft.opendata.remarkabletrees.ACTION_LIST";
+    public static final String ACTION_DISPLAY_POI_MAP = "org.androidsoft.opendata.remarkabletrees.ACTION_MAP";
+    public static final String ACTION_DISPLAY_POI_AR = "org.androidsoft.opendata.remarkabletrees.ACTION_AR";
+    public static final String ACTION_ABOUT = "org.androidsoft.opendata.remarkabletrees.ACTION_ABOUT";
+    public static final String ACTION_TREE = "org.androidsoft.opendata.remarkabletrees.ACTION_ARBRE";
     public static final String TREE_ID = "id_tree";
+    public static final String TAG = "RemarkableTrees";
     
 }

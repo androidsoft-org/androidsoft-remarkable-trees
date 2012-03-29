@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Arbres remarquables</string>
+    <string name="app_name">Arbres remarquables de Paris</string>
     
     <string name="button_list_around">A proximité</string>
     <string name="button_map">Carte</string>
@@ -18,5 +18,7 @@
 
     <string name="no_location">Pas de géolocalisation, ni GPS, ni réseau.</string>
     <string name="no_distance">Distance non disponible</string>
+
+    <string name="message_activate_location">Les services de géolocalisation (GPS ou réseau) semblent désactivés !\n\nVoulez-vous en activer un pour utiliser cette application ?</string>
 
 </resources>

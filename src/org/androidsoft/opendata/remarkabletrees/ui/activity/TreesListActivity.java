@@ -12,16 +12,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
+package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
-import org.androidsoft.opendata.arbres.ui.adapter.TreesAdapter;
+import org.androidsoft.opendata.remarkabletrees.ui.adapter.TreesAdapter;
 import android.content.Intent;
 import android.location.Location;
 import android.widget.Toast;
 import java.util.List;
-import org.androidsoft.opendata.arbres.Constants;
-import org.androidsoft.opendata.arbres.R;
-import org.androidsoft.opendata.arbres.service.ArbreService;
+import org.androidsoft.opendata.remarkabletrees.Constants;
+import org.androidsoft.opendata.remarkabletrees.R;
+import org.androidsoft.opendata.remarkabletrees.service.TreesService;
 import org.androidsoft.poi.service.LocationService;
 import org.androidsoft.poi.service.POIService;
 import org.androidsoft.poi.ui.activity.POIListActivity;
@@ -31,7 +31,7 @@ import org.androidsoft.poi.ui.adapter.POIAdapter;
  * Tree list Activity
  * @author Pierre LEVY
  */
-public class ArbresListActivity extends POIListActivity 
+public class TreesListActivity extends POIListActivity 
 {
     @Override
     protected int getLayout()
@@ -48,7 +48,7 @@ public class ArbresListActivity extends POIListActivity
     @Override
     protected POIAdapter getAdapter()
     {
-        ArbreService service = new ArbreService();
+        TreesService service = new TreesService();
         List list = service.getPOIs(this);
         double latitude = 48.8;
         double longitude = 2.34;

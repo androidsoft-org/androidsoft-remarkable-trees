@@ -12,14 +12,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.ui.activity;
+package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
-import org.androidsoft.opendata.arbres.Constants;
-import org.androidsoft.opendata.arbres.R;
+import org.androidsoft.opendata.remarkabletrees.Constants;
+import org.androidsoft.opendata.remarkabletrees.R;
 
 /**
  * Splash Activity 

@@ -12,26 +12,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.service;
+package org.androidsoft.opendata.remarkabletrees.service;
 
 import android.content.Context;
 import java.util.List;
-import org.androidsoft.opendata.arbres.model.Arbre;
+import org.androidsoft.opendata.remarkabletrees.model.RemarkableTree;
 import org.androidsoft.poi.service.POIService;
 
 /**
- * Arbre Service
+ * RemarkableTree Service
  * @author Pierre LEVY
  */
-public class ArbreService extends POIService<Arbre>
+public class TreesService extends POIService<RemarkableTree>
 {
     
-    private static ArbreService mSingleton = new ArbreService();
+    private static TreesService mSingleton = new TreesService();
     
     
     private static final String CSV_FILE = "arbres.csv";
 
-    public static ArbreService instance()
+    public static TreesService instance()
     {
         return mSingleton;
     }
@@ -43,15 +43,15 @@ public class ArbreService extends POIService<Arbre>
     }
 
     @Override
-    public Arbre newInstance(String[] record)
+    public RemarkableTree newInstance(String[] record)
     {
-        return new Arbre( record );
+        return new RemarkableTree( record );
     }
     
-    public Arbre getTree( Context context , int id )
+    public RemarkableTree getTree( Context context , int id )
     {
-        List<Arbre> list = getPOIs( context );
-        for( Arbre arbre : list )
+        List<RemarkableTree> list = getPOIs( context );
+        for( RemarkableTree arbre : list )
         {
             if( arbre.getId() == id )
             {

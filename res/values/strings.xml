@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Remarkable Trees</string>
+    <string name="app_name">Remarkable Trees of Paris</string>
     
     <string name="button_list_around">List around</string>
     <string name="button_map">Map</string>
@@ -17,5 +17,7 @@
     
     <string name="no_location">No location found, nor GPS, nor network</string>
     <string name="no_distance">Distance not available</string>
+    
+    <string name="message_activate_location">Location services (GPS and network) seem to be disabled!\n\nDo you want to enable one of them to use this application ?</string>
 
 </resources>

@@ -12,16 +12,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.androidsoft.opendata.arbres.model;
+package org.androidsoft.opendata.remarkabletrees.model;
 
 import android.util.Log;
 import org.androidsoft.poi.model.AbstractPOI;
 
 /**
- * Arbre
+ * RemarkableTree
  * @author Pierre LEVY
  */
-public class Arbre extends AbstractPOI
+public class RemarkableTree extends AbstractPOI
 {
 
     private Integer _arrondissement;
@@ -36,7 +36,7 @@ public class Arbre extends AbstractPOI
     private String _variete;
     private String _espaceVert;
     
-    public Arbre(String[] record)
+    public RemarkableTree(String[] record)
     {
         try
         {
