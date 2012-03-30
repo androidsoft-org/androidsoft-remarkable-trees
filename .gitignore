@@ -1,8 +1,9 @@
+*.swp
 /gen/
 /bin/
 /private/
 /tmp/
+/.apt_generated/
 /local.properties
 /nbandroid/private.properties
-*.swp
 
