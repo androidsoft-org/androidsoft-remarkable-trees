@@ -5,4 +5,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:clickable="true"
-    android:apiKey="0zv3oFzgfk69s9l6wFfYtFKaULdDVyQ531tNq3Q" />
+    android:apiKey="0zv3oFzgfk69ohwpMFvmPrwAk5P2m5Q5Z0IH-dg"
+    />
+    
+<!--
+    android:apiKey="0zv3oFzgfk69s9l6wFfYtFKaULdDVyQ531tNq3Q" debug
+    android:apiKey="0zv3oFzgfk69ohwpMFvmPrwAk5P2m5Q5Z0IH-dg" release
+-->
