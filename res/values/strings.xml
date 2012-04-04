@@ -20,4 +20,6 @@
     
     <string name="message_activate_location">Location services (GPS and network) seem to be disabled!\n\nDo you want to enable one of them to use this application ?</string>
 
+    <string name="tab_data">Specifications</string>
+    <string name="tab_description">Description</string>
 </resources>

@@ -66,9 +66,9 @@ public class TreeActivity extends FragmentActivity
             mViewPager = (ViewPager) findViewById(R.id.pager);
             mTabsAdapter = new TabsAdapter(this, mTabHost, mViewPager);
 
-            mTabsAdapter.addTab(mTabHost.newTabSpec("data").setIndicator("Caractéristiques"),
+            mTabsAdapter.addTab(mTabHost.newTabSpec("data").setIndicator( getString( R.string.tab_data)),
                     TreeDataFragment.class, null);
-            mTabsAdapter.addTab(mTabHost.newTabSpec("description").setIndicator("Description"),
+            mTabsAdapter.addTab(mTabHost.newTabSpec("description").setIndicator(getString( R.string.tab_description)),
                     TreeDescriptionFragment.class, null);
         }
 
