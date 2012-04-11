@@ -8,7 +8,7 @@
     <string name="button_about">About</string>
     
     <!-- Credits screen -->
-    <string name="credits_current_version">Version 1.0</string>
+    <string name="credits_current_version">Version 1.0.3</string>
     <string name="credits_app_name">Paris\' Remarkable Trees</string>
     
     <string name="html_asset_format">%1$d-en.html</string>
