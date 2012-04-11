@@ -18,6 +18,8 @@ import org.androidsoft.opendata.remarkabletrees.ui.adapter.TreesAdapter;
 import android.content.Intent;
 import android.location.Location;
 import android.widget.Toast;
+import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.OptionsItem;
 import java.util.List;
 import org.androidsoft.opendata.remarkabletrees.Constants;
 import org.androidsoft.opendata.remarkabletrees.R;
@@ -31,6 +33,7 @@ import org.androidsoft.poi.ui.adapter.POIAdapter;
  * Tree list Activity
  * @author Pierre LEVY
  */
+@EActivity
 public class TreesListActivity extends POIListActivity 
 {
     @Override
@@ -81,5 +84,13 @@ public class TreesListActivity extends POIListActivity
         intent.putExtra(Constants.TREE_ID, id );
         startActivity(intent);
     }
-  
+
+    @OptionsItem(android.R.id.home)
+    public void onHome()
+    {
+        Intent intent = new Intent( Constants.ACTION_DASHBOARD );
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+    
 }

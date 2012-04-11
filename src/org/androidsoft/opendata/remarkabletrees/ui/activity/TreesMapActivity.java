@@ -15,6 +15,8 @@
 package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.content.Intent;
+import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.OptionsItem;
 import java.util.List;
 import org.androidsoft.opendata.remarkabletrees.Constants;
 import org.androidsoft.opendata.remarkabletrees.R;
@@ -28,6 +30,7 @@ import org.androidsoft.poi.map.POIOverlayResources;
  * Map Activity
  * @author Pierre LEVY
  */
+@EActivity
 public class TreesMapActivity extends POIMapActivity
 {
     private static final int ZOOM = 15;
@@ -95,6 +98,14 @@ public class TreesMapActivity extends POIMapActivity
     {
         Intent intent = new Intent( Constants.ACTION_TREE );
         intent.putExtra(Constants.TREE_ID, id );
+        startActivity(intent);
+    }
+
+    @OptionsItem(android.R.id.home)
+    public void onHome()
+    {
+        Intent intent = new Intent( Constants.ACTION_DASHBOARD );
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 }
