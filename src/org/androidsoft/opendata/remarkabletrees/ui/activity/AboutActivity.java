@@ -15,10 +15,13 @@
 package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.OptionsItem;
+import org.androidsoft.opendata.remarkabletrees.Constants;
 import org.androidsoft.opendata.remarkabletrees.R;
 import org.androidsoft.utils.credits.CreditsParams;
 import org.androidsoft.utils.credits.CreditsView;
@@ -64,6 +67,14 @@ public class AboutActivity extends Activity
 
         return p;
 
+    }
+    
+    @OptionsItem(android.R.id.home)
+    public void onHome()
+    {
+        Intent intent = new Intent( Constants.ACTION_DASHBOARD );
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 
 }
