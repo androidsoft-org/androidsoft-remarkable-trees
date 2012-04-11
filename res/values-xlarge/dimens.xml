@@ -12,6 +12,6 @@
     <dimen name="padding_pane">10dp</dimen>
     <dimen name="padding_text">2dp</dimen>
     <dimen name="padding_icon">8dp</dimen>
-    <dimen name="icon_small_app">50dp</dimen>
-    <dimen name="medium_font">12sp</dimen>
+    <dimen name="list_icon">150dp</dimen>
+    <dimen name="medium_font">16sp</dimen>
 </resources>

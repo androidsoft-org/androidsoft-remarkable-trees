@@ -5,9 +5,10 @@
 	android:layout_height="match_parent">
 
     <ImageView android:id="@+id/icon"
-        android:layout_width="80dp"
-	android:layout_height="80dp"
-        android:padding="10dp"/>
+        android:layout_width="@dimen/list_icon"
+	android:layout_height="@dimen/list_icon"
+        android:padding="@dimen/padding"/>
+        
     <LinearLayout
 	android:orientation="vertical"
         android:layout_weight="1"
@@ -16,13 +17,18 @@
             
         <TextView 
             android:id="@+id/distance"
+            android:textSize="@dimen/large_font"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"/>
+            
         <TextView android:id="@+id/title"
+            android:textSize="@dimen/medium_font"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+            
         <TextView android:id="@+id/description"
+            android:textSize="@dimen/medium_font"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
