@@ -13,10 +13,11 @@
             
         <ImageView android:id="@+id/button_show_on_map"
             android:src="@drawable/button_show_on_map"
+            android:contentDescription="@string/image_show_on_map_button"      
             android:gravity="center"
-            android:padding="5dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"/> 
+            android:padding="@dimen/padding"
+            android:layout_width="@dimen/show_on_map_button"
+            android:layout_height="@dimen/show_on_map_button"/> 
 
         <LinearLayout
             android:orientation="vertical"
@@ -43,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -67,6 +69,6 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
 
-        </LinearLayout>
+        </LinearLayout>   
     </TabHost>
 </LinearLayout>

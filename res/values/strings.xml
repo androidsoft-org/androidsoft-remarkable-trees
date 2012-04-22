@@ -8,7 +8,7 @@
     <string name="button_about">About</string>
     
     <!-- Credits screen -->
-    <string name="credits_current_version">Version 1.0.3</string>
+    <string name="credits_current_version">Version 1.0.4</string>
     <string name="credits_app_name">Paris\' Remarkable Trees</string>
     
     <string name="html_asset_format">%1$d-en.html</string>
@@ -22,4 +22,11 @@
 
     <string name="tab_data">Specifications</string>
     <string name="tab_description">Description</string>
+    
+    <!-- Accessibility -->
+    <string name="image_close_button">Close button</string>
+    <string name="image_height_icon">Height icon</string>
+    <string name="image_circumference_icon">Circumference icon</string>
+    <string name="image_tree_preview">Tree preview</string>
+    <string name="image_show_on_map_button">Show on map button</string>
 </resources>

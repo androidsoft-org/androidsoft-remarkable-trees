@@ -5,6 +5,7 @@
 	android:layout_height="match_parent">
 
     <ImageView android:id="@+id/icon"
+        android:contentDescription="@string/image_tree_preview"      
         android:layout_width="@dimen/list_icon"
 	android:layout_height="@dimen/list_icon"
         android:padding="@dimen/padding"/>

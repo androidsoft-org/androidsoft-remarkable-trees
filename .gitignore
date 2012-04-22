@@ -6,4 +6,11 @@
 /.apt_generated/
 /local.properties
 /nbandroid/private.properties
+/market/
+/proguard.cfg
+/project.properties
+/ant.properties
+/build.properties
+/default.properties
+/libs/
 

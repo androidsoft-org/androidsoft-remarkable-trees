@@ -2,8 +2,6 @@
 <resources>
     <color name="green">#ff1A8A17</color>
     <color name="dark_gray">#ff2a2a2a</color>
-    <color name="light_gray">#ff444444</color>
-    <color name="black">#ff000000</color>
     <color name="radar">#aa74dd74</color>
     <color name="progressStartColor">#aa9dff9d</color>
     <color name="progressCenterColor">#aa5abb5a</color>

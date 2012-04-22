@@ -12,7 +12,7 @@
               android:paddingRight="0dip">
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="1"
@@ -21,19 +21,18 @@
         <TextView android:layout_height="wrap_content"
           android:layout_width="wrap_content"
           android:id="@+id/balloon_item_title"
-          android:text="balloon_item_title"
           android:textSize="16dip"
           android:textColor="@android:color/primary_text_light"/>
         <TextView android:layout_height="wrap_content"
           android:layout_width="wrap_content"
           android:id="@+id/balloon_item_snippet"
-          android:text="balloon_item_snippet"
           android:textSize="12dip"
           android:textColor="@android:color/secondary_text_light"/>
     </LinearLayout>
 
     <ImageView android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:contentDescription="@string/image_close_button"
            android:src="@drawable/balloon_overlay_close"
            android:id="@+id/balloon_close"
            android:paddingLeft="10dip"

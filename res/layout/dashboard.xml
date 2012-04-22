@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:padding="2dip"
-              android:background="@drawable/bg_home" 
-              android:orientation="vertical" >
+    style="@style/dashboard"
+    android:baselineAligned="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="2dip"
+    android:orientation="vertical" >
     
     <LinearLayout
+        android:baselineAligned="false"
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="0dip"
         android:layout_weight="1" >
          
         <LinearLayout
@@ -21,26 +23,26 @@
             android:gravity="center" >
             
             <Button style="@style/dashboard_button"
-                        android:id="@+id/button_map"
-                        android:layout_width="@dimen/dashboard_button"
-                        android:layout_height="@dimen/dashboard_button"
-                        android:background="@drawable/button_map" />
+                android:id="@+id/button_map"
+                android:layout_width="@dimen/dashboard_button"
+                android:layout_height="@dimen/dashboard_button"
+                android:background="@drawable/button_map" />
                     
             <TextView style="@+style/dashboard_label"
-                          android:layout_width="wrap_content"
-                          android:layout_height="@dimen/dashboard_label_height"
-                          android:text="@string/button_map" />
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dashboard_label_height"
+                android:text="@string/button_map" />
                     
             <Button style="@style/dashboard_button"
-                        android:id="@+id/button_about"
-                        android:background="@drawable/button_about"
-                        android:layout_width="@dimen/dashboard_button"
-                        android:layout_height="@dimen/dashboard_button" />
+                android:id="@+id/button_about"
+                android:background="@drawable/button_about"
+                android:layout_width="@dimen/dashboard_button"
+                android:layout_height="@dimen/dashboard_button" />
                     
             <TextView style="@+style/dashboard_label"
-                          android:layout_width="wrap_content"
-                          android:layout_height="@dimen/dashboard_label_height"
-                          android:text="@string/button_about" />
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dashboard_label_height"
+                android:text="@string/button_about" />
                   
         </LinearLayout>
         <LinearLayout

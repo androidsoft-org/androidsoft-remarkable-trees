@@ -9,9 +9,10 @@
     <dimen name="dashboard_label_height">100dp</dimen>
     <dimen name="large_font">30sp</dimen>
     <dimen name="padding">10dp</dimen>
-    <dimen name="padding_pane">10dp</dimen>
-    <dimen name="padding_text">2dp</dimen>
-    <dimen name="padding_icon">8dp</dimen>
+    <dimen name="left_pane">400dp</dimen>
     <dimen name="list_icon">150dp</dimen>
     <dimen name="medium_font">16sp</dimen>
+    <dimen name="show_on_map_button">80dp</dimen>
+    <dimen name="data_picto">80dp</dimen>
+
 </resources>
