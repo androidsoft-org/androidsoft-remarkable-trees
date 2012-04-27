@@ -9,7 +9,7 @@
     
 
         <!-- Credits screen -->
-    <string name="credits_current_version">Version 1.0.4</string>
+    <string name="credits_current_version">Version 1.0.5</string>
     <string name="credits_app_name">Arbres Remarquables de Paris</string>
 
     <string name="html_asset_format">%1$d-fr.html</string>
