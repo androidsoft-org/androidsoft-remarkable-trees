@@ -17,3 +17,5 @@
 /nbandroid/
 /build.xml
 /proguard-project.txt
+/out/
+/.idea/workspace.xml
