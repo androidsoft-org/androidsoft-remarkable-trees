@@ -14,3 +14,6 @@
 /default.properties
 /libs/
 
+/nbandroid/
+/build.xml
+/proguard-project.txt
