@@ -15,8 +15,8 @@
 package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.content.Intent;
-import com.googlecode.androidannotations.annotations.EActivity;
-import com.googlecode.androidannotations.annotations.OptionsItem;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsItem;
 import java.util.List;
 import org.androidsoft.opendata.remarkabletrees.Constants;
 import org.androidsoft.opendata.remarkabletrees.R;

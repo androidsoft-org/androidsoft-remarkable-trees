@@ -1,7 +1,4 @@
 *.swp
-/gen/
-/bin/
-/private/
 /tmp/
 /.apt_generated/
 /local.properties
@@ -12,10 +9,15 @@
 /ant.properties
 /build.properties
 /default.properties
-/libs/
-
 /nbandroid/
 /build.xml
 /proguard-project.txt
 /out/
-/.idea/workspace.xml
+/build/
+/.nb-gradle/
+/.gradle/
+/bin/
+/gen/
+/.idea/
+/private/
+/graphics/

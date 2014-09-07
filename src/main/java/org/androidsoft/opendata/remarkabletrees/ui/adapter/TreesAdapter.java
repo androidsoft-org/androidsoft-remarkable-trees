@@ -17,16 +17,17 @@ package org.androidsoft.opendata.remarkabletrees.ui.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import java.util.List;
+
 import org.androidsoft.opendata.remarkabletrees.R;
 import org.androidsoft.poi.model.POI;
 import org.androidsoft.poi.ui.adapter.POIAdapter;
+
+import java.util.List;
 
 /**
  * Trees Adapter

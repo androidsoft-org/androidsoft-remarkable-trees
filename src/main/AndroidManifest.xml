@@ -2,11 +2,11 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.androidsoft.opendata.remarkabletrees"
-          android:versionCode="6"
-          android:versionName="1.0.5"
+          android:versionCode="7"
+          android:versionName="1.0.6"
           android:installLocation="preferExternal" >
           
-    <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="11" />
+    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19" />
     
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -21,7 +21,8 @@
           
     <application android:label="@string/app_name" 
                  android:icon="@drawable/icon"
-                 android:hardwareAccelerated="true" >
+                 android:hardwareAccelerated="true" 
+                 android:allowBackup="true" >
         <uses-library android:required="true" android:name="com.google.android.maps"></uses-library>
             
         <activity android:name=".ui.activity.SplashActivity"

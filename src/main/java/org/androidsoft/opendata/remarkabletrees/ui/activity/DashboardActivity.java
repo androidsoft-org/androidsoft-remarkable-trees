@@ -15,8 +15,8 @@
 package org.androidsoft.opendata.remarkabletrees.ui.activity;
 
 import android.content.Intent;
-import com.googlecode.androidannotations.annotations.Click;
-import com.googlecode.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
 import org.androidsoft.opendata.remarkabletrees.Constants;
 import org.androidsoft.opendata.remarkabletrees.R;
 import org.androidsoft.poi.ui.activity.POILocationCheckActivity;

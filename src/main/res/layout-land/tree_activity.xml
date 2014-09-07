@@ -45,12 +45,10 @@
         android:layout_height="match_parent" >
 
         <fragment class="org.androidsoft.opendata.remarkabletrees.ui.fragment.TreeDataFragment"
-            android:id="@+id/tree_data_fragment"
             android:layout_width="@dimen/left_pane"
             android:layout_height="match_parent"/>
 
         <fragment class="org.androidsoft.opendata.remarkabletrees.ui.fragment.TreeDescriptionFragment"
-            android:id="@+id/tree_description_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>    
